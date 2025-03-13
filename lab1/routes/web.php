@@ -15,7 +15,7 @@ use App\Http\Controllers\TinController;
 
 Route::get('/',[TinController::class, 'trangChu']);
 Route::get('/lienhe',[TinController::class, 'lienHe']);
-Route::get('/ct{id}',[TinController::class, 'chiTiet']);
+Route::get('/ct/{id}',[TinController::class, 'chiTiet']);
 Route::get('/thongtinsv',[ThongTinController::class, 'thongTin']);
 
 
