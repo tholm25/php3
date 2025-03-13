@@ -11,7 +11,7 @@
         }
 
         public function chiTiet($id){
-            return 'Chi tiết tin số: '. $id;
+            return '<h1>Đây là trang hiện chi tiết của tin có id là: '. $id .'</h1>';
         }
     }
 ?>
