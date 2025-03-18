@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tin Tức Nổi Bật</title>
+    <title>Tin tức theo loại: {{ $loai }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -27,31 +27,35 @@
         }
         .back-link {
             text-decoration: none;
-            color: #333;
-            font-weight: 600;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+            color: #5a6268;
         }
     </style>
 </head>
 <body>
 
 <div class="container mt-4">
-    <h1 class="mb-4 text-primary">Tin tức nổi bật</h1>
+    <h1 class="mb-4 text-primary">Danh sách tin trong loại: {{ $loai }}</h1>
+
     <div class="row">
         @foreach ($thongtins as $thongtin)
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-3">
                 <div class="news-card">
                     <h2 class="news-title">
                         <a href="{{ route('thongtin.chiTiet', ['id' => $thongtin->id]) }}">{{ $thongtin->name }}</a>
                     </h2>
                     <p class="text-muted">{{ $thongtin->description }}</p>
-                    <a href="{{ route('tin.loai', ['loai' => $thongtin->category]) }}" class="btn btn-primary btn-sm mt-2">
-                        Xem tin cùng loại
-                    </a>
+                    <p class="text-muted"><small>Số lượt xem: {{ $thongtin->viewers }}</small></p>
                 </div>
             </div>
         @endforeach
     </div>
-    <a href="{{ route('trangchu') }}" class="back-link">Quay lại trang chủ</a>
+
+    <a href="{{ route('thongtin.danhsach') }}" class="back-link">Quay lại danh sách tin</a>
 </div>
 
 </body>

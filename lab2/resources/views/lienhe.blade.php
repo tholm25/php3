@@ -16,7 +16,7 @@
             <p><strong>Địa chỉ:</strong> Đông Hoàng, TP.Thanh Hóa, Thanh Hóa</p>
         </div>
         <div class="mt-3">
-            <a href="/" class="btn btn-primary">Quay lại</a>
+            <a href="{{ route('trangchu') }}" class="btn btn-primary">Quay lại</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
