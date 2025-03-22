@@ -78,34 +78,31 @@
         <a href="{{ route('trangchu') }}"><header>THOLM NEWS</header></a> 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('trangchu') }}">Trang Chủ</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('trangchu') }}">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('thongtin.danhsach') }}">Tin Tức Nổi Bật</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('tin.loai', ['loai' => 1]) }}">Thời sự</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('tin.loai', ['loai' => 2]) }}">Kinh tế</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('tin.loai', ['loai' => 3]) }}">Thế giới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('lienhe') }}">Liên Hệ</a>
+                    </li>
+                </ul>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('thongtin.danhsach') }}">Tin Tức Nổi Bật</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown">
-                                Danh Mục
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Thời sự</a></li>
-                                <li><a class="dropdown-item" href="#">Thể thao</a></li>
-                                <li><a class="dropdown-item" href="#">Giải trí</a></li>
-                                <li><a class="dropdown-item" href="#">Kinh tế</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('lienhe') }}">Liên Hệ</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </nav> 
+        </nav>         
         <main class="container">
             <article> 
                 @yield('noidung')

@@ -49,9 +49,6 @@
                         <a href="{{ route('thongtin.chiTiet', ['id' => $thongtin->id]) }}">{{ $thongtin->name }}</a>
                     </h2>
                     <p class="text-muted">{{ $thongtin->description }}</p>
-                    <a href="{{ route('tin.loai', ['loai' => $thongtin->category]) }}" class="btn btn-primary btn-sm mt-2">
-                        Xem tin cùng loại
-                    </a>
                 </div>
             </div>
         @endforeach

@@ -20,7 +20,14 @@
         public function loaiTin($loai)
         {
         $thongtins = DB::table('thong_tins')->where('category', $loai)->get();
-        return view('loaitin', ['thongtins' => $thongtins, 'loai' => $loai]);
+
+        $danhMuc = [
+            1 => "Thời sự",
+            2 => "Kinh tế",
+            3 => "Thế giới",
+        ];
+        return view('loaitin', ['thongtins' => $thongtins, 'loai' => $danhMuc[$loai]]);
+        // return view('loaitin', ['thongtins' => $thongtins, 'loai' => $loai]);
         }
     }
 ?>

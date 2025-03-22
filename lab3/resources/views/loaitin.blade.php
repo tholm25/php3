@@ -44,7 +44,7 @@
 <body>
 
 <div class="container mt-4">
-    <h1 class="mb-4 text-primary">Danh sách tin trong loại: {{ $loai }}</h1>
+    <h1 class="mb-4 text-primary">{{ $loai }}</h1>
 
     <div class="row">
         @foreach ($thongtins as $thongtin)
